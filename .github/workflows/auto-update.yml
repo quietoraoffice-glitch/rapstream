@@ -1,0 +1,60 @@
+name: RAP Gasy Auto-Update
+
+on:
+  schedule:
+    # Toutes les 3 heures
+    - cron: '0 */3 * * *'
+  
+  workflow_dispatch: # Permet de lancer manuellement
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Create config directory
+        run: mkdir -p config
+      
+      - name: Create credentials file
+        env:
+          CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        run: |
+          echo "$CREDENTIALS_JSON" > config/credentials.json
+          cat config/credentials.json
+      
+      - name: Run auto-update
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          PLAYLIST_ID: ${{ secrets.PLAYLIST_ID }}
+        run: |
+          python -c "
+          import os
+          import sys
+          sys.path.insert(0, '.')
+          from backend.app.auto_update import automatic_update
+          print('Starting auto-update...')
+          result = automatic_update()
+          print(f'Result: {result}')
+          "
+      
+      - name: Commit and push logs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add logs/auto_update.log
+          git commit -m "Auto-update logs: $(date)" || echo "No changes to commit"
+          git push
+        continue-on-error: true
