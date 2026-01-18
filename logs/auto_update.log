@@ -1,0 +1,155 @@
+[2026-01-18 01:02:37] 🚀 Scheduler démarré - Mises à jour toutes les 3 heures
+[2026-01-18 01:02:37] 🔄 Scheduler lancé en arrière-plan (mise à jour toutes les 3 heures)
+[2026-01-18 01:02:37] ======================================================================
+[2026-01-18 01:02:37] 🔄 DÉBUT DE LA MISE À JOUR AUTOMATIQUE
+[2026-01-18 01:02:37] 📅 2026-01-18 01:02:37
+[2026-01-18 01:02:37] 🔍 Total mots-clés à traiter: 46
+[2026-01-18 01:02:37] ======================================================================
+[2026-01-18 01:02:37] 
+[1/46] 🔍 Recherche: 'rap malagasy'
+[2026-01-18 01:03:16]   ✅ Ajoutées: 50 | ⏭️ Doublons: 0 | ❌ Erreurs: 0
+[2026-01-18 01:03:17] 
+[2/46] 🔍 Recherche: 'rap gasy'
+[2026-01-18 01:03:56]   ✅ Ajoutées: 50 | ⏭️ Doublons: 0 | ❌ Erreurs: 0
+[2026-01-18 01:03:57] 
+[3/46] 🔍 Recherche: 'hip hop malagasy'
+[2026-01-18 01:04:18]   ✅ Ajoutées: 9 | ⏭️ Doublons: 0 | ❌ Erreurs: 40
+[2026-01-18 01:04:19] 
+[4/46] 🔍 Recherche: 'hip hop gasy'
+[2026-01-18 01:04:20]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=hip+hop+gasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:20] 
+[5/46] 🔍 Recherche: 'rap madagascar'
+[2026-01-18 01:04:21]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+madagascar&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:21] 
+[6/46] 🔍 Recherche: 'rap tanà'
+[2026-01-18 01:04:22]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+tan%C3%A0&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:22] 
+[7/46] 🔍 Recherche: 'rap tana'
+[2026-01-18 01:04:23]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+tana&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:23] 
+[8/46] 🔍 Recherche: 'hira rap'
+[2026-01-18 01:04:24]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=hira+rap&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:24] 
+[9/46] 🔍 Recherche: 'hira vaovao'
+[2026-01-18 01:04:24]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=hira+vaovao&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:24] 
+[10/46] 🔍 Recherche: 'vaovao rap'
+[2026-01-18 01:04:25]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=vaovao+rap&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:25] 
+[11/46] 🔍 Recherche: 'tononkira'
+[2026-01-18 01:04:26]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=tononkira&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:26] 
+[12/46] 🔍 Recherche: 'paroles rap gasy'
+[2026-01-18 01:04:27]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=paroles+rap+gasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:27] 
+[13/46] 🔍 Recherche: 'lyrics rap malagasy'
+[2026-01-18 01:04:28]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=lyrics+rap+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:28] 
+[14/46] 🔍 Recherche: 'lyric video gasy'
+[2026-01-18 01:04:29]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=lyric+video+gasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:29] 
+[15/46] 🔍 Recherche: 'rap gasy clip officiel'
+[2026-01-18 01:04:30]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+gasy+clip+officiel&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:30] 
+[16/46] 🔍 Recherche: 'official video rap malagasy'
+[2026-01-18 01:04:31]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=official+video+rap+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:31] 
+[17/46] 🔍 Recherche: 'official audio rap gasy'
+[2026-01-18 01:04:32]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=official+audio+rap+gasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:32] 
+[18/46] 🔍 Recherche: 'freestyle rap malagasy'
+[2026-01-18 01:04:33]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=freestyle+rap+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:33] 
+[19/46] 🔍 Recherche: 'live rap gasy'
+[2026-01-18 01:04:34]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=live+rap+gasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:34] 
+[20/46] 🔍 Recherche: 'rap gasy feat'
+[2026-01-18 01:04:35]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+gasy+feat&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:35] 
+[21/46] 🔍 Recherche: 'rap malagasy featuring'
+[2026-01-18 01:04:36]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+malagasy+featuring&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:36] 
+[22/46] 🔍 Recherche: 'remix rap gasy'
+[2026-01-18 01:04:37]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=remix+rap+gasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:37] 
+[23/46] 🔍 Recherche: 'cypher rap malagasy'
+[2026-01-18 01:04:38]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=cypher+rap+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:38] 
+[24/46] 🔍 Recherche: 'rap gasy diss'
+[2026-01-18 01:04:38]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+gasy+diss&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:38] 
+[25/46] 🔍 Recherche: 'trap malagasy'
+[2026-01-18 01:04:39]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=trap+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:39] 
+[26/46] 🔍 Recherche: 'drill malagasy'
+[2026-01-18 01:04:40]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=drill+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:40] 
+[27/46] 🔍 Recherche: 'boom bap malagasy'
+[2026-01-18 01:04:41]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=boom+bap+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:41] 
+[28/46] 🔍 Recherche: 'old school rap malagasy'
+[2026-01-18 01:04:42]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=old+school+rap+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:42] 
+[29/46] 🔍 Recherche: 'underground rap malagasy'
+[2026-01-18 01:04:43]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=underground+rap+malagasy&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:43] 
+[30/46] 🔍 Recherche: 'rap 501'
+[2026-01-18 01:04:44]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+501&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:44] 
+[31/46] 🔍 Recherche: 'rap 502'
+[2026-01-18 01:04:45]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+502&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:45] 
+[32/46] 🔍 Recherche: 'rap 503'
+[2026-01-18 01:04:46]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+503&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:46] 
+[33/46] 🔍 Recherche: 'rap 504'
+[2026-01-18 01:04:47]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+504&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:47] 
+[34/46] 🔍 Recherche: 'rap 505'
+[2026-01-18 01:04:48]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+505&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:48] 
+[35/46] 🔍 Recherche: 'rap 506'
+[2026-01-18 01:04:49]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+506&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:49] 
+[36/46] 🔍 Recherche: 'rap 601'
+[2026-01-18 01:04:50]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+601&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:50] 
+[37/46] 🔍 Recherche: 'rap 602'
+[2026-01-18 01:04:51]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+602&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:51] 
+[38/46] 🔍 Recherche: 'rap 603'
+[2026-01-18 01:04:52]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+603&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:52] 
+[39/46] 🔍 Recherche: 'rap 701'
+[2026-01-18 01:04:53]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+701&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:53] 
+[40/46] 🔍 Recherche: 'rap 702'
+[2026-01-18 01:04:53]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+702&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:53] 
+[41/46] 🔍 Recherche: 'rap 703'
+[2026-01-18 01:04:54]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+703&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:54] 
+[42/46] 🔍 Recherche: 'rap 801'
+[2026-01-18 01:04:55]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+801&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:55] 
+[43/46] 🔍 Recherche: 'rap 901'
+[2026-01-18 01:04:56]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=rap+901&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:56] 
+[44/46] 🔍 Recherche: 'cyphaka'
+[2026-01-18 01:04:57]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=cyphaka&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:57] 
+[45/46] 🔍 Recherche: 'zaza rap taiza'
+[2026-01-18 01:04:58]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=zaza+rap+taiza&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:58] 
+[46/46] 🔍 Recherche: 'kolotsaina mainty'
+[2026-01-18 01:04:59]   ❌ Erreur critique: Erreur lors de la recherche: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?q=kolotsaina+mainty&part=snippet&type=video&maxResults=50&relevanceLanguage=fr&order=relevance&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+[2026-01-18 01:04:59] 
+======================================================================
+[2026-01-18 01:04:59] 📊 RÉSUMÉ DE LA MISE À JOUR
+[2026-01-18 01:04:59] ======================================================================
+[2026-01-18 01:04:59] ✅ Total vidéos ajoutées: 109
+[2026-01-18 01:04:59] ⏭️ Total doublons détectés: 0
+[2026-01-18 01:04:59] ❌ Total erreurs: 83
+[2026-01-18 01:04:59] ✨ Mise à jour terminée à 01:04:59
+[2026-01-18 01:04:59] ======================================================================
+

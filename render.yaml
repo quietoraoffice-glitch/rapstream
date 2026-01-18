@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: rapstream-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: PLAYLIST_ID
+        sync: false
+```
+
+### **Étape 3 : Créer `.gitignore`** (si pas déjà fait)
+```
+venv/
+__pycache__/
+*.pyc
+.env
+config/.env
+config/token.pickle
+logs/
+.DS_Store
+*.log
+node_modules/
