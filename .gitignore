@@ -28,6 +28,7 @@ credentials.json
 .env
 .env.local
 config.json
+config/token.pickle
 
 # Node
 node_modules/
