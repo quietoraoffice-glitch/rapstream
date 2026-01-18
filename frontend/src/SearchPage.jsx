@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
 export default function SearchPage({ onBack }) {
   const [keywords, setKeywords] = useState('')
   const [maxResults, setMaxResults] = useState(50)
@@ -16,7 +18,7 @@ export default function SearchPage({ onBack }) {
     setResults(null)
 
     try {
-      const response = await fetch('http://localhost:8000/api/search-and-add', {
+      const response = await fetch(`${API_URL}/api/search-and-add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

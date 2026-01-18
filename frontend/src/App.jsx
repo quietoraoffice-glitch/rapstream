@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import SearchPage from './SearchPage'
 import './App.css'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
 export default function App() {
   const [videos, setVideos] = useState([])
   const [loading, setLoading] = useState(true)
@@ -17,7 +19,7 @@ export default function App() {
     setError('')
 
     try {
-      const response = await fetch('http://localhost:8000/api/videos')
+      const response = await fetch(`${API_URL}/api/videos`)
       
       if (!response.ok) {
         throw new Error('Erreur lors de la récupération de la playlist')

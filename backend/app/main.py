@@ -4,8 +4,8 @@ from googleapiclient.discovery import build
 import os
 from dotenv import load_dotenv
 
-# Imports relatifs (après FastAPI)
-from .search import search_and_add_videos
+# Imports relatifs
+from .auth import get_authenticated_service
 from .models import SearchRequest
 from .auto_update import start_scheduler_background
 
@@ -30,6 +30,12 @@ app.add_middleware(
 # Variables globales
 YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
 PLAYLIST_ID = os.getenv('PLAYLIST_ID')
+
+@app.on_event("startup")
+async def startup_event():
+    """Lance le scheduler en arrière-plan au démarrage"""
+    start_scheduler_background()
+    print("✅ Scheduler de mise à jour automatique lancé !")
 
 @app.get("/")
 def read_root():
@@ -66,6 +72,31 @@ def get_playlist_videos():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/api/search-and-add")
+def search_and_add(request: SearchRequest):
+    """
+    Recherche et ajoute des vidéos à la playlist
+    En production (Render): utilise clé API
+    En local: utilise OAuth2 avec credentials.json
+    """
+    try:
+        # Utiliser la clé API pour les recherches et ajouts
+        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+        
+        # Importer la fonction de recherche
+        from .search_api import search_and_add_videos_with_api
+        
+        result = search_and_add_videos_with_api(
+            youtube,
+            PLAYLIST_ID,
+            request.keywords,
+            request.max_results
+        )
+        return result
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.post("/api/add-video")
 def add_video_to_playlist(video_id: str):
     """Ajoute une vidéo à la playlist"""
@@ -89,26 +120,6 @@ def add_video_to_playlist(video_id: str):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/api/search-and-add")
-def search_and_add(request: SearchRequest):
-    """Recherche et ajoute des vidéos à la playlist"""
-    try:
-        result = search_and_add_videos(
-            PLAYLIST_ID,
-            request.keywords,
-            request.max_results
-        )
-        return result
-    
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    
-@app.on_event("startup")
-async def startup_event():
-    """Lance le scheduler en arrière-plan au démarrage"""
-    start_scheduler_background()
-    print("✅ Scheduler de mise à jour automatique lancé !")
 
 if __name__ == "__main__":
     import uvicorn

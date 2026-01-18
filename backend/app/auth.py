@@ -3,6 +3,7 @@ import pickle
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
+from googleapiclient.discovery import build
 
 # Fichier où stocker le token
 TOKEN_FILE = 'config/token.pickle'
@@ -14,6 +15,7 @@ SCOPES = ['https://www.googleapis.com/auth/youtube']
 def get_authenticated_service():
     """
     Retourne un service YouTube authentifié avec OAuth2
+    Fonctionne EN LOCAL uniquement
     """
     creds = None
     
@@ -28,6 +30,12 @@ def get_authenticated_service():
             creds.refresh(Request())
         else:
             # Créer un nouveau flux d'authentification
+            if not os.path.exists(CREDENTIALS_FILE):
+                raise FileNotFoundError(
+                    f"credentials.json non trouvé dans {CREDENTIALS_FILE}. "
+                    "Cette fonction ne fonctionne qu'en local."
+                )
+            
             flow = InstalledAppFlow.from_client_secrets_file(
                 CREDENTIALS_FILE, SCOPES)
             creds = flow.run_local_server(port=8888)
@@ -37,7 +45,6 @@ def get_authenticated_service():
             pickle.dump(creds, token)
     
     # Construire le service YouTube
-    from googleapiclient.discovery import build
     youtube = build('youtube', 'v3', credentials=creds)
     
     return youtube
