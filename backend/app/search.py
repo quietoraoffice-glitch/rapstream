@@ -1,12 +1,9 @@
-import re
+from googleapiclient.discovery import build
 from datetime import datetime
-from .auth import get_authenticated_service
+import re
 
 def parse_duration(duration_str):
-    """
-    Parse une durée YouTube au format ISO 8601 (PT2M30S) en secondes
-    Retourne le nombre de secondes
-    """
+    """Parse une durée YouTube au format ISO 8601"""
     try:
         match = re.match(r'PT(\d+H)?(\d+M)?(\d+S)?', duration_str)
         if not match:
@@ -16,23 +13,52 @@ def parse_duration(duration_str):
         minutes = int(match.group(2)[:-1]) if match.group(2) else 0
         seconds = int(match.group(3)[:-1]) if match.group(3) else 0
         
-        total_seconds = hours * 3600 + minutes * 60 + seconds
-        return total_seconds
-    except Exception as e:
-        print(f"DEBUG: Erreur parsing durée: {str(e)}")
+        return hours * 3600 + minutes * 60 + seconds
+    except:
         return 0
 
-def search_and_add_videos(playlist_id, keywords, max_results=50):
+def get_existing_video_ids(youtube, playlist_id):
     """
-    Recherche des vidéos YouTube et les ajoute à la playlist avec OAuth2
-    - Filtre les vidéos < 2 minutes
-    - Anti-doublons automatique
-    - Tous les formats acceptés
+    Récupère la liste de TOUS les video IDs déjà dans la playlist
+    """
+    existing_ids = set()
+    next_page_token = None
+    
+    try:
+        while True:
+            request = youtube.playlistItems().list(
+                playlistId=playlist_id,
+                part='snippet',
+                maxResults=50,
+                pageToken=next_page_token
+            )
+            response = request.execute()
+            
+            for item in response.get('items', []):
+                video_id = item['snippet']['resourceId']['videoId']
+                existing_ids.add(video_id)
+            
+            next_page_token = response.get('nextPageToken')
+            if not next_page_token:
+                break
+    
+    except Exception as e:
+        print(f"DEBUG: Erreur récupération playlist: {str(e)}")
+    
+    print(f"DEBUG: {len(existing_ids)} vidéos déjà dans la playlist")
+    return existing_ids
+
+def search_and_add_videos_with_api(youtube, playlist_id, keywords, max_results=50):
+    """
+    Recherche et ajoute avec clé API (pour production/Render)
+    - Anti-doublons GLOBAL (vérifie avant d'ajouter)
+    - Filtre par durée (2min+)
+    - Toutes les chaînes
     """
     try:
-        youtube = get_authenticated_service()
+        # Récupérer les vidéos existantes UNE FOIS
+        existing_video_ids = get_existing_video_ids(youtube, playlist_id)
         
-        # Rechercher les vidéos
         request = youtube.search().list(
             q=keywords,
             part='snippet',
@@ -53,12 +79,16 @@ def search_and_add_videos(playlist_id, keywords, max_results=50):
         print(f"DEBUG: Trouvé {len(items)} items pour '{keywords}'")
         
         for item in items:
-            # Extraire videoId depuis item['id']['videoId']
             item_id = item.get('id', {})
             video_id = item_id.get('videoId')
             
             if not video_id:
-                print("DEBUG: Ignoré - pas de videoId")
+                continue
+            
+            # ===== VÉRIFIER SI DÉJÀ DANS LA PLAYLIST =====
+            if video_id in existing_video_ids:
+                skipped_count += 1
+                print(f"DEBUG: ⏭️ Déjà dans playlist: {video_id}")
                 continue
             
             # ===== FILTRER PAR DURÉE (minimum 2 minutes) =====
@@ -112,6 +142,9 @@ def search_and_add_videos(playlist_id, keywords, max_results=50):
                 )
                 add_request.execute()
                 
+                # Ajouter à la liste locale pour éviter les doublons dans cette recherche
+                existing_video_ids.add(video_id)
+                
                 added_videos.append({
                     'id': video_id,
                     'title': title,
@@ -125,7 +158,7 @@ def search_and_add_videos(playlist_id, keywords, max_results=50):
                 error_msg = str(e).lower()
                 if 'duplicate' in error_msg or 'already exists' in error_msg:
                     skipped_count += 1
-                    print(f"DEBUG: ⏭️ Doublon")
+                    print(f"DEBUG: ⏭️ Doublon détecté")
                 else:
                     error_count += 1
                     print(f"DEBUG: ❌ Erreur: {str(e)}")
