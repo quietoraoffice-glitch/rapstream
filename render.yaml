@@ -12,17 +12,3 @@ services:
         sync: false
       - key: PLAYLIST_ID
         sync: false
-```
-
-### **Étape 3 : Créer `.gitignore`** (si pas déjà fait)
-```
-venv/
-__pycache__/
-*.pyc
-.env
-config/.env
-config/token.pickle
-logs/
-.DS_Store
-*.log
-node_modules/
