@@ -4,13 +4,12 @@ import schedule
 import time
 from datetime import datetime
 from dotenv import load_dotenv
-from .search import search_and_add_videos
-from .auth import get_authenticated_service
 
 # Charger les variables d'environnement
 load_dotenv('config/.env')
 
 PLAYLIST_ID = os.getenv('PLAYLIST_ID')
+YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
 LOG_FILE = 'logs/auto_update.log'
 
 # Créer le dossier logs s'il n'existe pas
@@ -95,7 +94,7 @@ def automatic_update():
     Effectue une mise à jour automatique de la playlist
     Recherche les nouvelles vidéos RAP Gasy et les ajoute
     - 50 résultats par requête
-    - Anti-doublons automatique
+    - Anti-doublons global
     - Durée minimale: 2 minutes
     - Toutes les chaînes
     """
@@ -106,6 +105,13 @@ def automatic_update():
     log_update("=" * 70)
     
     try:
+        # Importer la fonction de recherche
+        from .search_api import search_and_add_videos_with_api
+        from googleapiclient.discovery import build
+        
+        # Construire le service YouTube avec clé API
+        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+        
         total_added = 0
         total_skipped = 0
         total_errors = 0
@@ -115,7 +121,8 @@ def automatic_update():
             log_update(f"\n[{idx}/{len(KEYWORDS_LIST)}] 🔍 Recherche: '{keywords}'")
             
             try:
-                result = search_and_add_videos(
+                result = search_and_add_videos_with_api(
+                    youtube,
                     PLAYLIST_ID,
                     keywords,
                     max_results=50  # 50 résultats par requête
@@ -173,11 +180,14 @@ def automatic_update():
         
     except Exception as e:
         log_update(f"❌ ERREUR CRITIQUE DANS LA MISE À JOUR: {str(e)}")
+        import traceback
+        log_update(traceback.format_exc())
         return None
 
 def start_scheduler():
     """
     Démarre le scheduler qui exécute les mises à jour toutes les 3 heures
+    Utilisé EN LOCAL uniquement
     """
     log_update("🚀 Scheduler démarré - Mises à jour toutes les 3 heures")
     
@@ -194,7 +204,8 @@ def start_scheduler():
 
 def start_scheduler_background():
     """
-    Lance le scheduler en arrière-plan (pour déploiement)
+    Lance le scheduler en arrière-plan (pour déploiement local)
+    Utilisé EN LOCAL uniquement
     """
     import threading
     
